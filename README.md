@@ -24,6 +24,10 @@ https://fujiwarakenta.sakura.ne.jp/kadai10_db_v1/login.php
 
 ## 更新箇所
 - ログイン画面、ユーザー管理機能を追加しました。
+- config内の接続情報をif文で分岐
+~~~
+if($_SERVER['HTTP_HOST'] == 'fujiwarakenta.sakura.ne.jp')
+~~~
 - flashの機能を使って、以下のシーンで補助の一文を表示させるようにしました。
 ~~~
    ログイン直後：成功した旨のメッセージと管理者権限があるかどうかの表示
