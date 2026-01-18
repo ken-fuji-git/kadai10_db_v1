@@ -1,6 +1,7 @@
 <?php
 // insert.php
 require_once __DIR__ . '/funcs.php';
+sschk();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect('index.php');
@@ -20,7 +21,7 @@ if ($errors) {
     redirect('index.php');
 }
 
-
+$name = trim((string)$_POST['name']);
 $age_raw = trim((string)($_POST['age'] ?? ''));
 $age = ($age_raw === '') ? null : (int)$age_raw;
 $gender = trim((string)($_POST['gender'] ?? ''));

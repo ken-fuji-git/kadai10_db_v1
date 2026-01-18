@@ -1,6 +1,7 @@
 <?php
 // index.php
 require_once __DIR__ . '/funcs.php';
+sschk();
 
 $error = get_flash('error', '');
 $old = get_flash('old', []);
